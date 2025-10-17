@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cesar Miguel Valdez Córdova</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+            line-height: 1.7;
+            color: #8B2E2E;
+            background: #F5F1ED;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        h1 {
+            font-family: 'Space Mono', monospace;
+            font-size: 2.5rem;
+            margin-bottom: 0.25rem;
+            font-weight: 700;
+            color: #8B2E2E;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            font-family: 'Space Mono', monospace;
+            color: #A64D4D;
+            font-size: 1rem;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+        }
+
+        .bio {
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .contact {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #D9CCBF;
+        }
+
+        .contact a {
+            color: #8B2E2E;
+            text-decoration: none;
+            margin-right: 1.5rem;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+
+        .contact a:hover {
+            border-bottom-color: #8B2E2E;
+        }
+
+        .nav {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #D9CCBF;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            color: #8B2E2E;
+            text-decoration: none;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+
+        .nav a:hover {
+            border-bottom-color: #8B2E2E;
+        }
+
+        h2 {
+            font-family: 'Space Mono', monospace;
+            font-size: 1.4rem;
+            margin-top: 3rem;
+            margin-bottom: 1.75rem;
+            font-weight: 700;
+            color: #8B2E2E;
+            letter-spacing: -0.01em;
+        }
+
+        .item {
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .item-title {
+            font-family: 'Space Mono', monospace;
+            font-weight: 600;
+            color: #8B2E2E;
+            margin-bottom: 0.35rem;
+            font-size: 1.05rem;
+        }
+
+        .item-meta {
+            color: #A64D4D;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: #8B2E2E;
+            text-decoration: none;
+            border-bottom: 1px solid #8B2E2E;
+            transition: background-color 0.15s ease;
+        }
+
+        a:hover {
+            background-color: rgba(139, 46, 46, 0.1);
+        }
+
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+
+        .placeholder {
+            color: #A64D4D;
+            font-style: italic;
+            padding: 1.5rem;
+            background-color: rgba(139, 46, 46, 0.05);
+            border-left: 3px solid #8B2E2E;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 2rem 1rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .contact a {
+                display: block;
+                margin-bottom: 0.5rem;
+                margin-right: 0;
+            }
+
+            .nav {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>César Miguel Valdez Córdova</h1>
+<p class="subtitle">PhD Student, Quantitative Life Sciences, Mila/McGill University</p>
+
+<div class="bio">
+    <p>I study how structure emerges in learning systems, both biological and artificial. When we apply methods like dimensionality reduction or train neural networks on data, we're making implicit choices about what patterns matter. I'm interested in understanding how the shape of the data itself, its underlying geometry, guides these discoveries. I'm developing tools and frameworks for agentic AI systems that can reason geometrically about scientific data, learning to make principled analytical choices based on the intrinsic structure of the systems they're analyzing.</p>
+</div>
+
+<div class="contact">
+    <span>Email: cesar (at) mila (dot) quebec</span>
+    <a href="https://github.com/cmvcordova">GitHub</a>
+    <a href="https://www.linkedin.com/in/cmvcordova/">LinkedIn</a>
+    <a href="https://scholar.google.com/citations?user=kI5hHesAAAAJ&hl=fr&oi=ao">Google Scholar</a>
+</div>
+
+<div class="nav">
+    <a href="#publications">Publications</a>
+    <a href="#open-source">Open Source</a>
+    <a href="#reviewing">Reviewing</a>
+    <a href="#education">Education</a>
+    <a href="#affiliations">Affiliations</a>
+</div>
+
+<h2 id="publications">Publications</h2>
+
+<div class="item">
+    <div class="item-title"><a href="#">PHATE Derived Ancestry Coordinates Can Effectively Capture Continuous Population Structure in Human Genomic Data</a></div>
+    <div class="item-meta">Matthew Scicluna, Shuang Ni, <strong>César Miguel Valdez Córdova</strong>, Jean-Christophe Grenier, Raphael Poujol, Kevin R. Moon, Guy Wolf, Sebastien Lemieux, Smita Krishnaswamy, Julie Hussin. ASHG 2025</div>
+</div>
+
+<div class="item">
+    <div class="item-title"><a href="#">Measure Before You Look: Grounding Embeddings Through Manifold Metrics</a></div>
+    <div class="item-meta">César Miguel Valdez Córdova, et al. UniReps @ NeurIPS 2025</div>
+</div>
+
+<div class="item">
+    <div class="item-title"><a href="#">Establishing Priors Towards Geomancer: A Geometric Reasoning AI Scientist</a></div>
+    <div class="item-meta">Cesar Miguel Valdez Córdova, et al. TAG-DS 2025</div>
+</div>
+
+<div class="item">
+    <div class="item-title"><a href="#">DNA-diffusion: leveraging generative models for controlling chromatin accessibility and gene expression via synthetic regulatory elements</a></div>
+    <div class="item-meta">Lucas Ferreira DaSilva, Simon Senan, Zain Munir Patel, ... <strong>Cesar Miguel Valdez Córdova</strong>, Aaron Wenteler, ... Luca Pinello, et al. ICLR 2024 Workshop on Machine Learning for Genomics Explorations</div>
+</div>
+
+<div class="item">
+    <div class="item-title"><a href="#">Perteval-scfm: benchmarking single-cell foundation models for perturbation effect prediction</a></div>
+    <div class="item-meta">A Wenteler, M Occhetta, N Branson, M Huebner, V Curean, WT Dee, ... <strong>Cesar Miguel Valdez Córdova</strong> (supervising author), ... et al. bioRxiv 2024</div>
+</div>
+
+<div class="item">
+    <div class="item-title"><a href="#">Towards learning activity cliff-aware molecular representations</a></div>
+    <div class="item-meta">Cesar Miguel Valdez Córdova. LatinX in AI (LXAI) @ ICML 2024</div>
+</div>
+
+<h2 id="open-source">Open Source</h2>
+
+<div class="item">
+    <div class="item-title"><a href="https://github.com/latent-reasoning-works">Latent Reasoning Works</a></div>
+    <div class="item-meta">Founder, Lead Developer</div>
+    <p>Framework for developing geometrically intelligent agentic systems. Tools for reasoning about manifold structure and guiding scientific discovery through geometric profiling and principled workflow selection.</p>
+</div>
+
+<div class="item">
+    <div class="item-title"><a href="https://github.com/mila-iqia/mila-research-template">Mila Research Template</a></div>
+    <div class="item-meta">Contributor</div>
+    <p>Official Mila research template enabling seamless interaction with SLURM-managed cluster computing. Designed NLP module, remote launching with submitit/hydra, and code profiling infrastructure for research reproducibility.</p>
+</div>
+
+<h2 id="reviewing">Reviewing</h2>
+
+<div class="item">
+    <p>Reviewer for:</p>
+    <ul>
+        <li>UniReps @ NeurIPS 2025</li>
+        <li>Constrained Optimization for ML (COML) @ NeurIPS 2025</li>
+        <li>NewinML @ ICML 2025</li>
+        <li>Learning Meaningful Representations of Life (LMRL) @ ICLR 2025</li>
+    </ul>
+</div>
+
+<h2 id="education">Education</h2>
+
+<div class="item">
+    <p><strong>Ph.D. in Quantitative Life Sciences</strong></p>
+    <p>McGill University, Montreal, QC, Canada (Sept. 2023  Present)</p>
+</div>
+
+<div class="item">
+    <p><strong>M.Sc. in Artificial Intelligence</strong> (Life Sciences Track)</p>
+    <p>Johannes Kepler Universität Linz, Austria (Grad. 2024)</p>
+    <p>Exchange semester at Polytechnique Montreal</p>
+</div>
+
+<div class="item">
+    <p><strong>M.Sc. in Computer Science</strong></p>
+    <p>Ensenada Center for Scientific Research and Higher Education (CICESE), Mexico (Grad. 2020)</p>
+</div>
+
+<div class="item">
+    <p><strong>B.Sc. in Chemistry and Nanotechnology Engineering</strong></p>
+    <p>Tec de Monterrey, Campus Monterrey, Mexico (Grad. 2016)</p>
+</div>
+
+<h2 id="affiliations">Affiliations</h2>
+
+<div class="item">
+    <p><strong>Current</strong></p>
+    <ul>
+        <li>PhD Student, Quantitative Life Sciences, Mila/McGill University</li>
+        <li>Research Fellow, Amii (Alberta Machine Intelligence Institute)</li>
+    </ul>
+</div>
+
+<div class="item">
+    <p><strong>Advisors</strong></p>
+    <ul>
+        <li><a href="https://guywolf.org/">Guy Wolf</a>, Mila & Université de Montréal</li>
+        <li><a href="https://www.mcgill.ca/pcb/faculty/mathieu-blanchette">Mathieu Blanchette</a>, McGill University & Mila</li>
+    </ul>
+</div>
+
+</body>
+</html>
