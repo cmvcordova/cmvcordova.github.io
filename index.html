@@ -338,7 +338,8 @@
 <script>
 document.querySelectorAll('h2').forEach(header => {
     header.addEventListener('click', () => {
-        document.querySelector('.nav').scrollIntoView({ behavior: 'smooth' });
+        window.location.hash = '';
+        window.scrollTo(0, 0);
     });
 });
 </script>
