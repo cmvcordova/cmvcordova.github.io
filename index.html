@@ -339,7 +339,8 @@
 document.querySelectorAll('h2').forEach(header => {
     header.addEventListener('click', () => {
         window.location.hash = '';
-        window.scrollTo(0, 0);
+        const navPosition = document.querySelector('.nav').offsetTop;
+        window.scrollTo(0, navPosition);
     });
 });
 </script>
