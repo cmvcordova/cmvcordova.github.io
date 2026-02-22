@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What do you mean you can't run the notebook?"
-date: 2026-02-25
+date: 2026-02-21
 description: "On research engineering, agentic workflows, and why the boring infrastructure work is the work that compounds."
 ---
 
