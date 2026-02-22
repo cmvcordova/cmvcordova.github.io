@@ -48,15 +48,18 @@ These aren't abstract principles. They're the design decisions behind [manylaten
 One command, one run:
 
 ```
-algorithm=phate data=embryoid_body metrics=topology cluster=mila seeds=3
+python -m src.main experiment=metric_sweep algorithm=phate data=embryoid_body metrics=topology cluster=mila seeds=3
 ```
 
-One command, hundreds of SLURM jobs:
+One command, hundreds of SLURM jobs — thanks to Hydra's `--multirun` flag, which takes comma-separated values and expands them into a full grid of configurations, each submitted as its own SLURM job:
 
 ```
-algorithm=pca,tsne,umap,phate data=swissroll,blobs,torus,cells
-k=5,10,15,20,25 seeds=1,2,3 cluster=mila
+python -m src.main --multirun experiment=metric_sweep \
+  algorithm=pca,tsne,umap,phate data=swissroll,blobs,torus,cells \
+  k=5,10,15,20,25 seeds=1,2,3 cluster=mila
 ```
+
+That's 4 × 4 × 5 × 3 = 240 runs, launched in one line. No loop, no bash script, no job array boilerplate. Hydra resolves the config for each combination, and the Submitit launcher handles the rest.
 
 The day I saw the full pipeline fire for the first time — every component talking to each other, results uploading to WandB automatically — was the happiest day I'd had in a while. Not because the science was solved, but because the instrument was finally built. Now I could start playing it.
 
