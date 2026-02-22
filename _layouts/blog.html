@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-309VQ3SB23"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-309VQ3SB23');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — César Miguel Valdez Córdova</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+            line-height: 1.7;
+            color: #3D2222;
+            background: #F5F1ED;
+            background-image: radial-gradient(circle, #d5cdc4 0.8px, transparent 0.8px);
+            background-size: 24px 24px;
+        }
+
+        /* ---- NAV ---- */
+        .blog-nav {
+            background: rgba(245, 241, 237, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(217, 204, 191, 0.6);
+            padding: 0.6rem 1.5rem;
+        }
+
+        .blog-nav-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .blog-nav .nav-name {
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: #8B2E2E;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .blog-nav .nav-name:hover {
+            color: #5eb89e;
+        }
+
+        .blog-nav .nav-links {
+            display: flex;
+            gap: 1.25rem;
+        }
+
+        .blog-nav .nav-links a {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.75rem;
+            color: #8B2E2E;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .blog-nav .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #5eb89e;
+            transition: width 0.25s ease;
+        }
+
+        .blog-nav .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .blog-nav .nav-links a:hover {
+            background: none;
+        }
+
+        /* ---- MAIN ---- */
+        .blog-main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 4rem;
+        }
+
+        .blog-header {
+            display: flex;
+            align-items: baseline;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .blog-header-accent {
+            font-family: 'Space Mono', monospace;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #d4a050;
+            letter-spacing: 0.02em;
+        }
+
+        .blog-title {
+            font-family: 'Space Mono', monospace;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #8B2E2E;
+            letter-spacing: -0.01em;
+        }
+
+        /* ---- POST CARDS ---- */
+        .post-card {
+            display: block;
+            background: #FDFBF9;
+            border-radius: 8px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #5eb89e;
+            box-shadow: 0 1px 4px rgba(61, 34, 34, 0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .post-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(61, 34, 34, 0.1);
+            border-color: #4a9a84;
+            color: inherit;
+            background: none;
+            background-color: #FDFBF9;
+        }
+
+        .post-card-title {
+            font-family: 'Space Mono', monospace;
+            font-weight: 600;
+            font-size: 0.98rem;
+            color: #8B2E2E;
+            margin-bottom: 0.35rem;
+            line-height: 1.5;
+        }
+
+        .post-card:hover .post-card-title {
+            color: #5eb89e;
+        }
+
+        .post-card-date {
+            font-family: 'Space Mono', monospace;
+            color: #8C6E60;
+            font-size: 0.78rem;
+            margin-bottom: 0.4rem;
+            font-weight: 400;
+        }
+
+        .post-card-desc {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #3D2222;
+        }
+
+        /* ---- FOOTER ---- */
+        .blog-footer {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.75rem;
+            color: #8C6E60;
+            background: #EDE7E0;
+            background-image: radial-gradient(circle, #cec6bc 0.8px, transparent 0.8px);
+            background-size: 24px 24px;
+        }
+
+        /* ---- LINKS ---- */
+        a {
+            color: #5eb89e;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #4a9a84;
+            background: none;
+        }
+
+        /* ---- RESPONSIVE ---- */
+        @media (max-width: 600px) {
+            .blog-main {
+                padding: 2rem 1.25rem 3rem;
+            }
+
+            .blog-title {
+                font-size: 1.2rem;
+            }
+
+            .post-card {
+                padding: 1rem;
+                border-left-width: 3px;
+            }
+
+            .blog-nav .nav-links {
+                gap: 0.75rem;
+            }
+
+            .blog-nav .nav-links a {
+                font-size: 0.7rem;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .post-card {
+                border-left: none;
+                border-top: 3px solid #5eb89e;
+            }
+
+            .blog-nav {
+                padding: 0.5rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="blog-nav">
+    <div class="blog-nav-inner">
+        <a href="/" class="nav-name">CMVC</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/blog">Blog</a>
+        </div>
+    </div>
+</nav>
+
+<main class="blog-main">
+    <div class="blog-header">
+        <span class="blog-header-accent">//</span>
+        <h1 class="blog-title">Blog</h1>
+    </div>
+
+    {{ content }}
+</main>
+
+<footer class="blog-footer">
+    &copy; {{ site.time | date: '%Y' }} César Miguel Valdez Córdova
+</footer>
+
+</body>
+</html>

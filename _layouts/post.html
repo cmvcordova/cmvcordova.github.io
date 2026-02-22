@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-309VQ3SB23"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-309VQ3SB23');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} — César Miguel Valdez Córdova</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+            line-height: 1.7;
+            color: #3D2222;
+            background: #F5F1ED;
+            background-image: radial-gradient(circle, #d5cdc4 0.8px, transparent 0.8px);
+            background-size: 24px 24px;
+        }
+
+        /* ---- NAV ---- */
+        .blog-nav {
+            background: rgba(245, 241, 237, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(217, 204, 191, 0.6);
+            padding: 0.6rem 1.5rem;
+        }
+
+        .blog-nav-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .blog-nav .nav-name {
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: #8B2E2E;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .blog-nav .nav-name:hover {
+            color: #5eb89e;
+        }
+
+        .blog-nav .nav-links {
+            display: flex;
+            gap: 1.25rem;
+        }
+
+        .blog-nav .nav-links a {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.75rem;
+            color: #8B2E2E;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .blog-nav .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #5eb89e;
+            transition: width 0.25s ease;
+        }
+
+        .blog-nav .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .blog-nav .nav-links a:hover {
+            background: none;
+        }
+
+        /* ---- MAIN ---- */
+        .post-main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 4rem;
+        }
+
+        .post-back {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.78rem;
+            color: #8C6E60;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+
+        .post-back:hover {
+            color: #5eb89e;
+        }
+
+        .post-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .post-title {
+            font-family: 'Space Mono', monospace;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #8B2E2E;
+            letter-spacing: -0.01em;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+        }
+
+        .post-date {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.8rem;
+            color: #8C6E60;
+            font-weight: 400;
+        }
+
+        /* ---- POST CONTENT ---- */
+        .post-content {
+            font-size: 1.08rem;
+            line-height: 1.85;
+            color: #3D2222;
+        }
+
+        .post-content h1,
+        .post-content h2,
+        .post-content h3,
+        .post-content h4 {
+            font-family: 'Space Mono', monospace;
+            color: #8B2E2E;
+            margin-top: 2.5rem;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+        }
+
+        .post-content h2 {
+            font-size: 1.3rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid rgba(217, 204, 191, 0.5);
+        }
+
+        .post-content h3 {
+            font-size: 1.1rem;
+        }
+
+        .post-content p {
+            margin-bottom: 1.25rem;
+        }
+
+        .post-content a {
+            color: #5eb89e;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(94, 184, 158, 0.3);
+        }
+
+        .post-content a:hover {
+            color: #4a9a84;
+            border-bottom-color: #4a9a84;
+            background: none;
+        }
+
+        .post-content ul,
+        .post-content ol {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+
+        .post-content li {
+            margin-bottom: 0.4rem;
+        }
+
+        .post-content blockquote {
+            border-left: 4px solid #d4a050;
+            padding: 0.75rem 1.25rem;
+            margin: 1.5rem 0;
+            background: #FDFBF9;
+            border-radius: 0 8px 8px 0;
+            color: #3D2222;
+        }
+
+        .post-content blockquote p:last-child {
+            margin-bottom: 0;
+        }
+
+        .post-content img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .post-content hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #D9CCBF, transparent);
+            margin: 2.5rem 0;
+        }
+
+        /* ---- CODE ---- */
+        .post-content code {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.88em;
+            background: #FDFBF9;
+            border: 1px solid rgba(217, 204, 191, 0.5);
+            border-radius: 4px;
+            padding: 0.15em 0.4em;
+            color: #8B2E2E;
+        }
+
+        .post-content pre {
+            background: #2D2018;
+            border-radius: 8px;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+            border: 1px solid rgba(217, 204, 191, 0.15);
+        }
+
+        .post-content pre code {
+            background: none;
+            border: none;
+            padding: 0;
+            color: #E8DDD0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        /* Warm syntax highlighting */
+        .highlight .k,
+        .highlight .kd,
+        .highlight .kn,
+        .highlight .kp,
+        .highlight .kr,
+        .highlight .kt { color: #d4a050; }
+        .highlight .s,
+        .highlight .s1,
+        .highlight .s2,
+        .highlight .se { color: #5eb89e; }
+        .highlight .c,
+        .highlight .c1,
+        .highlight .cm,
+        .highlight .cs { color: #8C6E60; font-style: italic; }
+        .highlight .nf,
+        .highlight .nb { color: #E8A87C; }
+        .highlight .nn,
+        .highlight .nc { color: #d4a050; }
+        .highlight .mi,
+        .highlight .mf,
+        .highlight .mh { color: #c87070; }
+        .highlight .o,
+        .highlight .p { color: #B8A898; }
+        .highlight .na { color: #5eb89e; }
+        .highlight .no { color: #c87070; }
+
+        /* ---- FOOTER ---- */
+        .blog-footer {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.75rem;
+            color: #8C6E60;
+            background: #EDE7E0;
+            background-image: radial-gradient(circle, #cec6bc 0.8px, transparent 0.8px);
+            background-size: 24px 24px;
+        }
+
+        /* ---- LINKS ---- */
+        a {
+            color: #5eb89e;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #4a9a84;
+            background: none;
+        }
+
+        /* ---- RESPONSIVE ---- */
+        @media (max-width: 768px) {
+            .post-title {
+                font-size: 1.35rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .post-main {
+                padding: 2rem 1.25rem 3rem;
+            }
+
+            .post-title {
+                font-size: 1.2rem;
+            }
+
+            .post-content {
+                font-size: 1rem;
+            }
+
+            .blog-nav .nav-links {
+                gap: 0.75rem;
+            }
+
+            .blog-nav .nav-links a {
+                font-size: 0.7rem;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .blog-nav {
+                padding: 0.5rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="blog-nav">
+    <div class="blog-nav-inner">
+        <a href="/" class="nav-name">CMVC</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/blog">Blog</a>
+        </div>
+    </div>
+</nav>
+
+<main class="post-main">
+    <a href="/blog" class="post-back">&larr; Back to blog</a>
+
+    <header class="post-header">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <time class="post-date">{{ page.date | date: "%B %-d, %Y" }}</time>
+    </header>
+
+    <article class="post-content">
+        {{ content }}
+    </article>
+</main>
+
+<footer class="blog-footer">
+    &copy; {{ site.time | date: '%Y' }} César Miguel Valdez Córdova
+</footer>
+
+</body>
+</html>

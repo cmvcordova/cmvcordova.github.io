@@ -1,0 +1,13 @@
+---
+layout: blog
+---
+
+{% for post in site.posts %}
+<a href="{{ post.url }}" class="post-card">
+    <div class="post-card-title">{{ post.title }}</div>
+    <div class="post-card-date">{{ post.date | date: "%B %-d, %Y" }}</div>
+    {% if post.description %}
+    <div class="post-card-desc">{{ post.description }}</div>
+    {% endif %}
+</a>
+{% endfor %}

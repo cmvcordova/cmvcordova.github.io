@@ -1,0 +1,12 @@
+title: César Miguel Valdez Córdova
+url: "https://cmvcordova.com"
+
+permalink: /blog/:year/:month/:day/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+exclude:
+  - README.md
+  - LICENSE
